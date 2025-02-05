@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sope chain</title>
+</head>
+<body>
+    <script>
+        function a(){
+            console.log(b);            
+        }
+        var b = 10;
+        a();
+
+        function x(){
+            var y =100;
+            z();
+            function z(){
+                console.log(y);
+            }
+        }
+        x();
+    </script>
+</body>
+</html>

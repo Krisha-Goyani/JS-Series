@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let & const</title>
+</head>
+<body>
+    <script>
+        console.log(b); //undefined
+        var b = 10;
+
+        //ERREORS 
+
+        // console.log(a); // reference error:Cannot access 'a' before initialization
+        let a = 10;
+
+        // const x = 1000;
+        // x = 100; //TypeError: Assignment to constant variable.
+
+        // const z; //SyntaxError: Missing initializer in const declaration
+
+        let p = 23;
+        // let p = 5; //SyntaxError: Identifier 'p' has already been declared
+
+        console.log(q); //ReferenceError: q is not defined
+        
+    </script>
+</body>
+</html>
