@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure-2</title>
+</head>
+
+<body>
+    <h1>closure-2</h1>
+    <script>
+        // function a(){
+        //     // let x = 10;
+        //     let y =100;
+        //     // console.log(y);     
+        //     function b(){
+        //         console.log(x);                
+        //     }
+        //     let x = 10;
+        //     return b;
+        // }
+        // // a()();  line-23 & 24,25 are same
+        // let close = a();
+        // close();
+
+        // -------2---------
+        // function a(z){
+        //     // let x = 10;
+        //     let y =100;
+        //     // console.log(y);     
+        //     function b(){
+        //         console.log(x,z);                
+        //     }
+        //     let x = 10;
+        //     return b;
+        // }
+        // // a()();
+        // let close = a("hii");
+        // close();
+
+        // ---------------------3--------------------
+        // function outest() {
+        //     let k = 23;
+        //     function outer(z) {
+        //         // let x = 10;
+        //         let y = 100;
+        //         // console.log(y);     
+        //         function inner() {
+        //             console.log(x, z, k);
+        //         }
+        //         let x = 10;
+        //         return inner;
+        //     }
+        //     return outer;
+        // }
+        // let x = 1000;
+        // let close = outest()("Hiiieeee")
+        // close()
+
+        // ------------------------4 data hide & encapsulation-------------------
+        // function counter(){
+        //     let count = 0;
+        //     return function incCounter(){
+        //         count++;
+        //         console.log(count);                
+        //     }
+        // }
+
+        // let counter1 = counter();
+        // counter1();
+        // counter1();
+        // counter1();
+
+        // let counter2 = counter(); //this counter 1 and counter 2 is completely differnt
+        // counter2();counter2();counter2();
+
+        // ------CONSTRUCTOR------------
+        function Counter(){
+            let count = 0;
+            this.incCounter = function(){
+                count++;
+                console.log(count);                
+            }
+            this.decCounter = function(){
+                count--;
+                console.log(count);                
+            }
+        }
+
+        let counter1 = new Counter();
+        counter1.incCounter();
+        counter1.incCounter();
+        counter1.decCounter();
+
+    </script>
+</body>
+
+</html>

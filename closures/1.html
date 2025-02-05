@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <script>
+        // function along with lexical scope forms a closure
+        function a(){
+            var a = 7;
+            function b(){
+                console.log(a);                
+            }
+            b();
+        }
+        a();
+
+        function x(){
+            var a = 6;
+            function y(){
+                console.log(a);                
+            }
+            a=100;
+            return y;
+        }
+        var z = x();
+        console.log(z);
+        z();
+
+        function p(){
+            var p = 23;
+            function x(){
+            var a = 6;
+            function y(){
+                console.log(a, p);                
+            }
+            // a=100;
+            return y;
+        }
+        x();
+        // console.log(z);
+        }
+        p();
+    </script>
+</body>
+</html>

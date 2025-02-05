@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+<body>
+    <h1>Set Timeout</h1>
+    <script>
+        // function x(){
+        //     var x = 10;
+        //     setTimeout(function (){
+        //         console.log(x);                
+        //     }, 3000)
+        //     console.log("Heyyy");  // first print this and then it prints 10
+        // }
+        // x();
+
+        // function z(){
+        //     for(let i = 1; i<=5; i++){
+        //         setTimeout(function (){
+        //             console.log(i);                
+        //         }, i * 1000)
+        //     }
+        //     console.log("Heyyy");  
+        // }
+        // z();
+        
+        function p(){
+            for(var i = 1; i<=5; i++){
+                function close(x){
+                    setTimeout(function (){
+                        console.log(x);                
+                    }, x * 1000);
+                }
+                close(i);
+            }
+        }
+        p();
+    </script>
+</body>
+</html>

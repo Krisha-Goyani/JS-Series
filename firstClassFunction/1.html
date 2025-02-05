@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firstClassFunction</title>
+</head>
+
+<body>
+    <h1>First Class Function</h1>
+    <script>
+        // function statement == function declarion
+        function a() {
+            console.log("heyyyy there");
+        }
+        a();
+        // function expression
+        let b = function () {
+            console.log("heyyyy ");
+        }
+        b();
+
+        // anonymous function 
+        // function (){            
+        // }
+
+        // named function expression
+        let c = function xyz() {
+            console.log("hello ");
+            console.log(xyz);   // shows a function         
+        }
+        c();
+        // xyz(); gives an reference error
+
+        //1. Assigned to variables
+        const greet = function () {
+            console.log("Hello, World!");
+        };
+        greet();  // Output: Hello, World!
+
+
+        //2.  Passed as arguments to other functions --- Passing a Function as an Argument (Callback)
+        function doSomething(callback) {
+            console.log("Doing something...");
+            callback(); // Call the function passed as an argument
+        }
+
+        function sayHello() {
+            console.log("Hello!");
+        }
+
+        doSomething(sayHello);
+
+        // 3. Returned from other functions----Returning a Function from Another Function (Higher-Order Function)
+        function createMultiplier(factor) {
+            return function (num) {
+                return num * factor;
+            };
+        }
+
+        const double = createMultiplier(2);
+        console.log(double(5)); // Output: 10
+
+
+    </script>
+</body>
+
+</html>

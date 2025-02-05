@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Loops</title>
+</head>
+
+<body>
+    <script>
+        // function fixedTask(counter = 0) {
+        //     Promise.resolve().then(() => {
+        //         console.log("Mic", counter);
+
+        //         if (counter % 5 === 0) {  // Give a chance for macrotasks to run
+        //             setTimeout(() => fixedTask(counter + 1), 0);
+        //         } else {
+        //             fixedTask(counter + 1);
+        //         }
+        //     });
+        // }
+
+        // setTimeout(() => {
+        //     console.log("Macrotask executed");
+        // }, 0);
+
+        // fixedTask();
+
+        console.log("Start");
+
+        setTimeout(() => {
+            console.log("Macrotask executed");
+        }, 0);
+
+        let now = Date.now();
+        while (Date.now() - now < 5000) { }  // Blocks event loop for 5 seconds
+
+        console.log("End");
+
+
+    </script>
+</body>
+
+</html>
