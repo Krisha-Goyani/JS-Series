@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function longRun(ms) {
+            const start = new Date;
+            while (new Date - start < ms) ;
+        }
+
+        function frozen() {
+            console.time("frozen");
+            longRun(5000);
+            console.timeEnd("frozenss");
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number">
+    <button id="frozenButton" onclick="frozen()">Frozen</button>
+</body>
+
+</html>
